@@ -1,0 +1,131 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c1e29;
+}
+#wrapper {
+    width: 65vmin;
+    height: 75vmin;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #293447;
+    border-radius: 8px;
+}
+#game-details {
+    padding: 1.2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: 1.2rem;
+}#game-details span{
+    display: flex;
+    gap: 5px;
+}
+#play-board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: #212837;
+}
+#play-board .food {
+    background: #FF003d;
+}
+#play-board .head {
+    background: #60cbff;
+}
+.text {
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    margin: auto auto;
+    color: #60cbff;
+}
+.restert {
+    text-align: center;
+    margin-top: 5rem;
+    display: flex;
+    gap: 10px;
+    color: #60cbff;
+}
+#controllers {
+    display: none;
+}
+#controllers.hidden {
+    display: none;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: darkred;
+}
+#up {
+    grid-area: up;
+}
+#left {
+    grid-area: left;
+}
+#down {
+    grid-area: down;
+}
+#right {
+    grid-area: right;
+}
+
+/* Start Button Styles */
+/* Start Button Styles */
+.start-btn {
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+.start-btn:hover {
+    background: #218838;
+}
+.hidden {
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    #controllers {
+        background: #000;
+        display: grid;
+        grid-template-areas:
+            "up up up"
+            "left down right";
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    #controllers.hidden {
+        display: none;
+    }
+  }
